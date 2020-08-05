@@ -1,0 +1,14 @@
+@function rem($px) {
+    @return ($px / 16) +rem;
+}
+
+//Высчитывает количество столбцов для size() в smartgrid
+//Если элементы сверстаны не по сетке
+//Необходимо знать ширину контейнера и ширину элемента
+//Для отступы между элемента рассчитываются с помощью
+//Свойства justify-content: space-between;
+@function pxToCol($w-item,$w-container,$offset) {
+  $val1: $w-container / 12;
+  $val2: $w-item + $offset;
+  @return $val2 / $val1;
+}

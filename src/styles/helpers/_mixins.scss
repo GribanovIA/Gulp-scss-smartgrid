@@ -1,0 +1,12 @@
+@mixin customContainer($width) {
+  max-width: $width+px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@mixin customContainerFluid {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}

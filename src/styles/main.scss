@@ -1,0 +1,13 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+//Стили компонентов
+@import "components/components";
+
+//Стили плагинов / фреймворков / чего-то еще
+@import "vendor/libs";
+//Переопределение стилей плагинов / фреймворков / чего-то еще
+@import "vendor-extension/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/modules";
