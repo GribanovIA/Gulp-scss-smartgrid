@@ -10,3 +10,94 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+
+// https://codepen.io/flodar/pen/erism
+@mixin triangle($direction, $sizeH, $sizeV, $color) {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  -moz-transform: scale(.9999);
+
+  @if $direction==top {
+    border-width: 0 $sizeV $sizeH $sizeV;
+    border-color: transparent transparent $color transparent;
+  }
+
+  @if $direction==bottom {
+    border-width: $sizeV $sizeH 0 $sizeV;
+    border-color: $color transparent transparent transparent;
+  }
+
+  @if $direction==left {
+    border-width: $sizeV $sizeH $sizeV 0;
+    border-color: transparent $color transparent transparent;
+  }
+
+  @if $direction==right {
+    border-width: $sizeV 0 $sizeV $sizeH;
+    border-color: transparent transparent transparent $color;
+  }
+
+  @if $direction==topright {
+    border-width: 0 $sizeH $sizeV 0;
+    border-color: transparent $color transparent transparent;
+  }
+
+  @if $direction==bottomright {
+    border-width: 0 0 $sizeH $sizeV;
+    border-color: transparent transparent $color transparent;
+  }
+
+  @if $direction==bottomleft {
+    border-width: $sizeH 0 0 $sizeV;
+    border-color: transparent transparent transparent $color;
+  }
+
+  @if $direction==topleft {
+    border-width: $sizeH $sizeV 0 0;
+    border-color: $color transparent transparent transparent;
+  }
+}
+
+@mixin pseudo($width: 100%,
+  $height: 100%,
+  $display: inline-block,
+  $pos: absolute,
+  $content: ""
+
+) {
+  content: $content;
+  display: $display;
+  position: $pos;
+  @include box($width, $height);
+}
+
+// https://codepen.io/alemesa/pen/XWbXLNK
+
+@mixin background-transition($initial, $hover, $inversed: false) {
+  background: linear-gradient(90deg,
+      $hover 0%,
+      $hover 50%,
+      $initial 50%,
+      $initial 100%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+
+  background-position: right bottom;
+
+  @if $inversed {
+    background-position: left bottom;
+  }
+
+  transition: background-position 0.25s ease-out;
+
+  &:hover {
+    background-position: left bottom;
+
+    @if $inversed {
+      background-position: right bottom;
+    }
+  }
+}

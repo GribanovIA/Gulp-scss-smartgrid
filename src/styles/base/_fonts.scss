@@ -1,10 +1,9 @@
-
-// Импорт шрифтов с Google-fonts. Url адрес должен быть без кавычек
-
-// @import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap);
-
 //Путь к шрифтам относительно main.css из папки dist
+
 $path: '../fonts';
+
+//https://transfonter.org/ - генерация шрифтов
+//https://www.myfonts.com/WhatTheFont/ - определение семейства шрифта по картинке
 
 // @font-face {
 //   font-family: 'Museo Cyrl';

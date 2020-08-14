@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/*!
+ * Accordion v2.8.0
+ * Simple accordion created in pure Javascript.
+ * https://github.com/michu2k/Accordion
+ *
+ * Copyright 2017-2019 Michał Strumpf
+ * Published under MIT License
+ */
+.ac {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
+  // Question class
+  .ac-q {
+    font-size: 26px;
+    font-weight: 300;
+    display: block;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+
+    }
+    &::before {
+      
+    }
+  }
+
+  // Answer class
+  .ac-a {
+    overflow: hidden;
+    transition-property: all;
+    transition-timing-function: ease;
+
+    p {
+      
+    }   
+  }
+
+  // Hide content when Javascript is enabled
+  .js-enabled {
+    > .ac-a {
+      visibility: hidden;
+    }
+  }
+
+  // Active class
+  &.is-active {
+    .ac-a {
+      visibility: visible;
+    }
+
+    .ac-q {
+      &::after {
+
+      }
+      &::before {
+
+      }       
+    }
+  }
+}

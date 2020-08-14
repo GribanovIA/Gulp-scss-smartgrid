@@ -15,8 +15,7 @@ li {
 body {
   font-family: 'Your font', //Указываем стандартный шрифт
   sans-serif;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 16px;
 }
 
 // Убираем нижнее подчеривание у ссылок
@@ -26,11 +25,10 @@ a {
   color:inherit;
 }
 
-// Container Bootstrap размеры
+// Container Bootstrap desktop first
 .container {
-    @include container();
-    @include sm(max-width, 540px);
-    @include md(max-width, 720px);
-    @include lg(max-width, 960px);
-    @include xl(max-width, 1200px);
+  @include container();
+  @include lg(max-width, 960px);
+  @include md(max-width, 720px);
+  @include sm(max-width, 540px);
 }
