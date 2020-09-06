@@ -23,6 +23,10 @@ gulp.task("scripts", () => {
         .pipe(gulpif(production, rename({
             suffix: ".min"
         })))
+        //Создаем алиас для url пути к картинкам в папке dist
+        .pipe(replace("@img", "./img"))
+          //Создаем алиас для url пути к svg картинкам в папке dist
+        .pipe(replace("@svg", "./img/svg"))
         .pipe(gulp.dest(paths.scripts.dist))
         .pipe(debug({
             "title": "JS files"
