@@ -1,8 +1,8 @@
-@mixin customContainer($width) {
-  max-width: $width+px;
+@mixin customContainer($width, $field) {
+  max-width: $width;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: $field;
+  padding-right: $field;
 }
 
 @mixin customContainerFluid {
@@ -10,6 +10,58 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+
+@mixin customRow($gutter) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: ($gutter / 2 * -1);
+  margin-right: ($gutter / 2 * -1);
+}
+
+
+@mixin customCol($size, $gutter) {
+  margin-left: $gutter / 2;
+  margin-right: $gutter / 2;
+  $val: 8.33333333% * $size;
+  width: #{calc(#{$val} - #{$gutter})};
+}
+
+@mixin customCol-lg($size, $gutter) {
+  margin-left: $gutter / 2;
+  margin-right: $gutter / 2;
+  $val: 8.33333333% * $size;
+  $width: #{calc(#{$val} - #{$gutter})};
+  @include lg(width, $width)
+}
+
+@mixin customCol-md($size, $gutter) {
+  margin-left: $gutter / 2;
+  margin-right: $gutter / 2;
+  $val: 8.33333333% * $size;
+  $width: #{calc(#{$val} - #{$gutter})};
+  @include md(width, $width)
+}
+
+@mixin customCol-sm($size, $gutter) {
+  margin-left: $gutter / 2;
+  margin-right: $gutter / 2;
+  $val: 8.33333333% * $size;
+  $width: #{calc(#{$val} - #{$gutter})};
+  @include sm(width, $width)
+}
+
+@mixin customCol-xs($size, $gutter) {
+  margin-left: $gutter / 2;
+  margin-right: $gutter / 2;
+  $val: 8.33333333% * $size;
+  $width: #{calc(#{$val} - #{$gutter})};
+  @include xs(width, $width)
+}
+
+
+
+
+
 
 // https://codepen.io/flodar/pen/erism
 @mixin triangle($direction, $sizeH, $sizeV, $color) {

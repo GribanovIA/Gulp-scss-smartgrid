@@ -1,7 +1,10 @@
 @import "import/normalize";
 
-//Опционально
+//Vendor styles
+@import "import/smart-grid-fluid";
 @import "import/smart-grid";
+
 @import "import/accordion";
 //https://jonsuh.com/hamburgers/ https://github.com/jonsuh/hamburgers
 @import "import/hamburgers/hamburgers.scss";
+@import "import/magnific-popup/magnific-main";
