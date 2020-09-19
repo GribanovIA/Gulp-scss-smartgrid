@@ -9,6 +9,7 @@ import rename from "gulp-rename";
 import browsersync from "browser-sync";
 import debug from "gulp-debug";
 import yargs from "yargs";
+import replace from "gulp-replace";
 
 const webpackConfig = require("../webpack.config.js"),
     argv = yargs.argv,
