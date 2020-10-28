@@ -6,5 +6,7 @@ export let ftpData = {
     './dist/**/*',
     './dist/.htaccess',
   ],
-  dist: '/www/my-site.ru/'
+  dist: '/www/my-site.ru/',
+  //Очищаем старые файлы перед загрузкой
+  removeFromServer: '/www/my-site.ru/**/*'
 }
