@@ -55,7 +55,8 @@ module.exports = {
 
     resolve: {
         alias: {
-            "%modules%": path.resolve(__dirname, "src/blocks/modules")
+            "%modules%": path.resolve(__dirname, "src/blocks/modules"),
+            'vue$': 'vue/dist/vue.esm.js' //По умолчанию импортируется только Runtime сборка Vue при этом если мы используем шаблоны внутри html документа они не работают. Для работы шаблонов нужно скачать полную версию Vue которая содержик компилятор шаблонов. Подробнее можно почитать тут - https://ru.vuejs.org/v2/guide/installation.html#Runtime-%D0%9A%D0%BE%D0%BC%D0%BF%D0%B8%D0%BB%D1%8F%D1%82%D0%BE%D1%80-vs-Runtime-only по поводу псевдонима (alias) тут - https://webpack.js.org/configuration/resolve/#resolvealias
         }
     }
 };
