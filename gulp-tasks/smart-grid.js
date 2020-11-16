@@ -18,21 +18,18 @@ gulp.task("smart-grid", (cb) => {
             fields: "15px" // side fields - 15px
         },
         breakPoints: {
-            xs: {
-                width: "320px" // 320px
-            },
-            sm: {
-                width: "576px" // 576px
-            },
-            md: {
-                width: "768px" // 768px
-            },
-            lg: {
-                width: "992px" // 992px
-            },
-            xl: {
-                width: "1200px" // 1200px
-            }
+          xs: {
+            width: "575.98px" // 320px
+          },
+          sm: {
+            width: "767.98px" // 576px "768px"
+          },
+          md: {
+            width: "991.98px" // 768px "992px"
+          },
+          lg: {
+            width: "1199.98px" // 992px "1200px"
+          },
         }
     });
     cb();

@@ -71,10 +71,12 @@
         "yargs": "^13.2.4"
     },
     "dependencies": {
+        "jq-accordion": "^1.0.3",
         "jquery": "^3.5.1",
         "magnific-popup": "^1.1.0",
         "normalize.css": "^8.0.1",
         "slick-carousel": "^1.8.1",
+        "slim-select": "^1.26.0",
         "smart-grid": "^2.1.2",
         "vue": "^2.6.12"
     },
