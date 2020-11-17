@@ -8,6 +8,7 @@
     },
     "license": "MIT",
     "scripts": {
+        "im": "node gulp-tasks/import-modules.js",
         "dev": "gulp",
         "build": "gulp prod --production",
         "build:views": "gulp views --production",
