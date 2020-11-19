@@ -6,13 +6,13 @@ const requireDir = require("require-dir"),
     paths = {
         views: {
             src: [
-                "./src/views/**/*.html",
-                "./src/views/pages/*.html"
+                "./src/views/**/*.{html,php}",
+                "./src/views/pages/*.{html,php}"
             ],
             dist: "./dist/",
             watch: [
-                "./src/blocks/**/*.html",
-                "./src/views/**/*.html"
+                "./src/blocks/**/*.{html,php}",
+                "./src/views/**/*.{html,php}"
             ]
         },
         styles: {

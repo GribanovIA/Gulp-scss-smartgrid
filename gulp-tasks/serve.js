@@ -6,10 +6,17 @@ import browsersync from "browser-sync";
 
 gulp.task("serve", () => {
     browsersync.init({
-        server: "./dist/",
+        //Заменяе proxy-name на тот который у вас указан в столбце Имя домена в Openserver
+        proxy: 'proxy-name',
         port: 4000,
         notify: true
     });
+    //Конфиг если работаем с обычными html файлами
+    // browsersync.init({
+    //     server: "./dist/",
+    //     port: 4000,
+    //     notify: true
+    // });
 
     gulp.watch(paths.views.watch, gulp.parallel("views"));
     gulp.watch(paths.styles.watch, gulp.parallel("styles"));

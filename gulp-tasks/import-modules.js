@@ -24,12 +24,12 @@ fs.readFile('src/js/import/modules.js', 'utf8', (err, data)=>{
 });
 
 //Html
-fs.readFile('src/views/modules.html', 'utf8', (err, data)=>{
+fs.readFile('src/views/modules.php', 'utf8', (err, data)=>{
   if (err) throw err;
   
-  let result = data + "\r\n" + `@@include("../blocks/modules/${fileName}/${fileName}.html")`;
+  let result = data + "\r\n" + `@@include("../blocks/modules/${fileName}/${fileName}.php")`;
   console.log(result);
-  fs.writeFile('src/views/modules.html', result, err =>{
+  fs.writeFile('src/views/modules.php', result, err =>{
     if(err) throw err;
   });
 });
