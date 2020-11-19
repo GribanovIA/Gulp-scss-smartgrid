@@ -34,9 +34,7 @@
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
-        @@include("./modules.php")
-
-
+        @@include("./src/views/modules.php")
         <script src="js/main.js"></script>
         <script src="js/vendor.js"></script>
     </body>
