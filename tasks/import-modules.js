@@ -27,7 +27,7 @@ fs.readFile('src/js/import/modules.js', 'utf8', (err, data)=>{
 fs.readFile('src/views/modules.php', 'utf8', (err, data)=>{
   if (err) throw err;
   
-  let result = data + "\r\n" + `@@include("../blocks/modules/${fileName}/${fileName}.php")`;
+  let result = data + "\r\n" + `@@include("./src/blocks/modules/${fileName}/${fileName}.php")`;
   console.log(result);
   fs.writeFile('src/views/modules.php', result, err =>{
     if(err) throw err;
