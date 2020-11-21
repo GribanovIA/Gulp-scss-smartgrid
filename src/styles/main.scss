@@ -11,3 +11,6 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+
+//Подключаем стили для Vue компонентов
+@import '../components/components'

@@ -34,8 +34,10 @@
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
+      <div id="app">
         @@include("./src/views/modules.php")
-        <script src="js/main.js"></script>
-        <script src="js/vendor.js"></script>
+      </div>
+      <script src="js/main.js"></script>
+      <script src="js/vendor.js"></script>
     </body>
 </html>

@@ -67,6 +67,8 @@
         "stylelint-order": "^3.0.0",
         "stylelint-selector-bem-pattern": "^2.1.0",
         "vinyl-ftp": "^0.6.1",
+        "vue-loader": "^15.9.5",
+        "vue-template-compiler": "^2.6.12",
         "webpack": "^4.30.0",
         "webpack-stream": "^5.2.1",
         "yargs": "^13.2.4"

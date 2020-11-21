@@ -20,7 +20,8 @@ const requireDir = require("require-dir"),
             dist: "./dist/styles/",
             watch: [
                 "./src/blocks/**/*.{scss,sass}",
-                "./src/styles/**/*.{scss,sass}"
+                "./src/styles/**/*.{scss,sass}",
+                "./src/components/**/*.{scss,sass}"
             ]
         },
         vendorStyles: {
@@ -32,7 +33,8 @@ const requireDir = require("require-dir"),
             dist: "./dist/js/",
             watch: [
                 "./src/blocks/**/*.js",
-                "./src/js/**/*.js"
+                "./src/js/**/*.js",
+                "./src/components/**/*.vue"
             ]
         },
         images: {
