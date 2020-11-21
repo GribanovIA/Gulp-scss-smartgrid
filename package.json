@@ -8,6 +8,7 @@
     },
     "license": "MIT",
     "scripts": {
+        "cc": "node tasks/create-component.js",
         "im": "node tasks/import-modules.js",
         "dev": "gulp",
         "build": "gulp prod --production",

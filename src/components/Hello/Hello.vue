@@ -1,5 +1,5 @@
 <template>
-  <h1 class="vue-header">{{msg}}</h1>
+  <h1>{{msg}}</h1>
 </template>
 
 <script>
