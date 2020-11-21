@@ -75,6 +75,7 @@
         "yargs": "^13.2.4"
     },
     "dependencies": {
+        "axios": "^0.21.0",
         "jq-accordion": "^1.0.3",
         "jquery": "^3.5.1",
         "magnific-popup": "^1.1.0",
