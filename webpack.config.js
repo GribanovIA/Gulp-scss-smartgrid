@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
     plugins: [ 
@@ -10,7 +11,8 @@ module.exports = {
             "window.jquery": "jquery", 
             "$": "jquery", 
             "window.$": "jquery" 
-        }) 
+        }),
+        new VueLoaderPlugin() 
     ],
     
     entry: {
@@ -39,16 +41,20 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: require.resolve("babel-loader"),
-                    query: {
-                        presets: [
-                            ["@babel/preset-env", { modules: false }]
-                        ]
-                    }
-                }
+              test: /\.js$/,
+              exclude: /node_modules/,
+              use: {
+                  loader: require.resolve("babel-loader"),
+                  query: {
+                      presets: [
+                          ["@babel/preset-env", { modules: false }]
+                      ]
+                  }
+              }
+            },
+            {
+              test: /\.vue$/,
+              loader: 'vue-loader'
             }
         ]
     },
