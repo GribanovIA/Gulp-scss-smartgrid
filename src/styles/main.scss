@@ -1,15 +1,19 @@
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/functions";
-//Стили компонентов
-@import "components/components";
+//Переменные, функции , миксины
+@import "abstracts/abstracts";
 
 //Стили плагинов / фреймворков / чего-то еще
 @import "vendor/libs";
+
 //Переопределение стилей плагинов / фреймворков / чего-то еще
 @import "vendor-extension/libs";
-@import "base/fonts";
-@import "base/general";
+
+//Стили компонентов / кнопок / модальных окон / checkbox
+@import "components/components";
+
+//Стили типографики / шрифтов / анимации
+@import "base/base";
+
+//Стили блоков страницы 
 @import "../blocks/modules";
 
 //Подключаем стили для Vue компонентов

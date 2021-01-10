@@ -1,28 +1,7 @@
-h1, h2, h3, h4, h5, h6, ul, p {
-    margin: 0;
-    padding: 0;
-}
-
-// Убираем точки у тега li
-li {
-  list-style-type: none;
-}
-
-*{
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Your font', //Указываем стандартный шрифт
-  sans-serif;
+    sans-serif;
   font-size: 16px;
-}
-
-// Убираем нижнее подчеривание у ссылок
-a {
-  text-decoration: none;
-  // Наследует значение от родителя
-  color:inherit;
 }
 
 // Container Bootstrap desktop first
@@ -32,9 +11,11 @@ a {
   @include md(max-width, 720px);
   @include sm(max-width, 540px);
 }
+
 .container-full {
   @include container-full();
 }
+
 .row {
   @include row-flex();
 }
