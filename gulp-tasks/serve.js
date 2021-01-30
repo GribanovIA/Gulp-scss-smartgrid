@@ -7,7 +7,7 @@ import browsersync from "browser-sync";
 gulp.task("serve", () => {
     browsersync.init({
         //Заменяе proxy-name на тот который у вас указан в столбце Имя домена в Openserver
-        proxy: 'proxy-name',
+        proxy: 'template',
         port: 4000,
         notify: true
     });

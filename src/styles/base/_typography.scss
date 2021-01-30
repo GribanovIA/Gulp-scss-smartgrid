@@ -17,6 +17,33 @@ h5 {
 
 }
 
-a.link {
+.text-small {
+  font-size: 12px;
+}
 
+.mark {
+  background-color: #ffe58f;
+}
+
+a.link-primary {
+  color: $link-primary;
+  &:hover {
+
+  }
+}
+
+a.link-secondary {
+  color: $link-secondary;
+  &:hover {
+
+  }
+}
+
+
+.p {
+  padding: 10px 0;
+}
+
+.display {
+  font-size: 40px;
 }

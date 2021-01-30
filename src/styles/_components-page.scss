@@ -1,0 +1,28 @@
+.my-components {
+  padding: 30px 0;
+}
+.my-components__btn {
+  width: 250px;
+  height: 35px;
+  margin: 0 15px;
+}
+.my-components__wrapper-x10 {
+  margin: 0 -10px;
+}
+.my-components__wrapper-y10 {
+  margin: -10px 0;
+}
+.my-components__color-item {
+  margin-top: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+}
+.my-components__color {
+  width: 150px;
+  height: 50px;
+}

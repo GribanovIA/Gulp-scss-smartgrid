@@ -13,6 +13,10 @@
 //Стили типографики / шрифтов / анимации
 @import "base/base";
 
+//Стили для страниц компонентов
+@import "components-page";
+@import "uikit-page";
+
 //Стили блоков страницы 
 @import "../blocks/modules";
 

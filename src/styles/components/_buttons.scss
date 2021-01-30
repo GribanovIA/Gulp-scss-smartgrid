@@ -1,0 +1,82 @@
+.btn {
+
+  //Отступы
+  padding: 7px;
+
+  //Позиционирование
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  //Размеры
+  // width: 290px;
+  // min-height: 70px;
+
+  //Border
+  border: 0 solid #000;
+  border-radius: 3px;
+
+  //Цвета
+  background-color: transparent;
+  color: #000;
+
+  //Размер шрифта
+  font-weight: 750;
+  font-style: normal;
+  font-size: 16px;
+
+  //Шрифт
+  font-family: "Avenir Next Cyr";
+  line-height: 19px;
+  letter-spacing: 0;
+  text-align: left;
+
+
+  cursor: pointer;
+
+  &:hover {}
+}
+
+button:disabled {
+  cursor: default;
+  opacity: .65;
+}
+
+// Различные стили кнопок
+.btn-primary {
+  background-color: $primary;
+  color: $text-black;
+}
+
+.btn-secondary {
+  background-color: $secondary;
+  color: $text-black;
+}
+
+
+.btn-outline-primary {
+  border: 2px solid $primary;
+  border-radius: 3px;
+
+  color: $primary;
+}
+.btn-outline-secondary {
+  border: 2px solid $secondary;
+  border-radius: 3px;
+
+  color: $secondary;
+}
+
+.btn-flat-primary {
+  transition: ease-in all 0.15s;
+  &:hover {
+    background-color: $primary-light;
+  }
+}
+
+.btn-flat-secondary {
+  transition: ease-in all 0.15s;
+  &:hover {
+    background-color: $secondary-light;
+  }
+}

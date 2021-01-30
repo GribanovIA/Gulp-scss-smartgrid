@@ -5,6 +5,9 @@ import './vue-instance';
 import Modernizr from './import/modernizr-custom'; //Присваиваем класс webp если браузер имеет поддержку
 import $ from 'jquery';
 
+//JS компоненты из библиотеки uikit
+import "./import/uikit.min";
+
 //Импорты BEM модулей
 import "./import/modules";
 

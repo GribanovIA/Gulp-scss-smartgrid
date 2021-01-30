@@ -1,0 +1,30 @@
+$primary: #007bff;
+$primary-light: #e8f1fb;
+$secondary: #ffc107;
+$secondary-light: #fff9e7;
+
+//typography
+$text-black: #000;
+$text-color: #111;
+
+$link-primary: #007bff;
+$link-secondary: #ffc107;
+
+//background
+$bg-black: #000;
+
+//border
+$bd-grey: #444;
+
+.primary {
+  background-color: $primary;
+}
+.primary-light {
+  background-color: $primary-light;
+}
+.secondary {
+  background-color: $secondary;
+}
+.secondary-light {
+  background-color: $secondary-light;
+}
