@@ -1,0 +1,15 @@
+.popup {
+  display: flex;
+  flex-direction: column;
+}
+.popup-pending {
+  justify-content: center;
+  align-items: center;
+}
+.popup-success {
+  justify-content: center;
+  align-items: center;
+}
+.is-invalid {
+  border: 2px solid red;
+}

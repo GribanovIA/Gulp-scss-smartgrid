@@ -1,0 +1,16 @@
+.popup {
+  margin: 0 auto;
+  position: relative;
+  height: 500px;
+  width: 450px;
+  background-color: rgb(216, 222, 224);
+  text-align: center;
+  &__close {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

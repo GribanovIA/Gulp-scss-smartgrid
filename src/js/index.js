@@ -8,6 +8,8 @@ import $ from 'jquery';
 //JS компоненты из библиотеки uikit
 import "./import/uikit.min";
 
+import "./base/base";
+
 //Импорты BEM модулей
 import "./import/modules";
 

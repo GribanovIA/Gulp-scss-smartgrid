@@ -26,3 +26,12 @@
   width: 150px;
   height: 50px;
 }
+.my-card {
+  @include col();
+  @include size(4);
+  background-color: rgb(97, 123, 209);
+  height: 400px;
+}
+.my-popups {
+  
+}

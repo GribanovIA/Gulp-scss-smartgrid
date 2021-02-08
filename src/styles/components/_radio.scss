@@ -1,0 +1,107 @@
+.radio-btn-wrapper {
+  display: flex;
+  align-items: center;
+
+  .custom-radio-btn {
+
+    background-color: #fff;
+  }
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.custom-radio-btn {
+  width: 344px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+
+  border: 1px solid #e6ecf4;
+
+  color: rgba(28, 27, 38, 0.6);
+
+  cursor: pointer;
+
+  svg {
+    margin-right: 12px;
+  }
+
+  svg.radio-btn-icon {
+    path {
+      fill: rgba(28, 27, 38, 0.6);
+    }
+  }
+}
+
+input[type="radio"]:checked+.custom-radio-btn {
+  box-sizing: border-box;
+  border: 1px solid #3A76F0;
+
+  background: #ebf9ff;
+  color: #3A76F0;
+
+  svg.radio-btn-icon {
+    path {
+      fill: #3A76F0;
+    }
+  }
+}
+
+
+
+
+
+.radio-wrapper {
+  display: flex;
+  //Выравниваем текст и checkbox по вертикали
+  align-items: flex-end;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+input[type='radio']:checked+.custom-radio::before {
+  display: block;
+}
+
+input[type='radio']:checked+.custom-radio svg {
+  display: block;
+}
+
+.custom-radio {
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+
+  //Габаритные размеры
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ddd;
+
+  //Добавляем маркер в checkbox
+
+  &::before {
+    content: "";
+    display: none;
+    position: absolute;
+    //Центруем по середине
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    //Размеры точки
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    //Цвет
+    background-color: red;
+  }
+
+}

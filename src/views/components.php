@@ -42,7 +42,7 @@
             <p class='display'>Framework</p>
             <a class='link-primary' href="uikit.php">Uikit</a>
           </div>
-          <div class="typography">
+          <div class="mt-30 my-typography">
             <p class='display'>Typography</p>
             <div class="p">
               <h1>Пример заголовка h1</h1>
@@ -67,7 +67,7 @@
               </a>
             </div>
           </div>
-          <div class="colors">
+          <div class="mt-30 my-colors">
             <p class='display'>Colors</p>
             <div class="p d-flex mt-n10 ml-n10">
               <div class="my-components__color-item">
@@ -89,7 +89,7 @@
             </div>
           </div>
 
-          <div class="buttons">
+          <div class="mt-30 my-buttons">
 
             <p class='display'>Buttons</p>
             <div class="p">
@@ -165,14 +165,139 @@
 
             <div class="p">
               <div class="my-components__wrapper-x10 d-flex">
-                <button class="my-components__btn btn btn-primary js-popup">js-popup</button>
-                <button class="my-components__btn btn btn-secondary js-popup">js-popup</button>
+                <button href="#popup-js" class="my-components__btn btn btn-primary open-popup-link-js">js-popup</button>
+                <button href="#popup-js" class="my-components__btn btn btn-secondary open-popup-link-js">js-popup</button>
               </div>
             </div>
 
           </div>
           
-          <div class="my-badges">
+          <div class="mt-30 my-cards">
+            <p class="display">Cards</p>
+            <div class="my-cards__row row">
+              <div class="my-card"></div>
+              <div class="my-card"></div>
+              <div class="my-card"></div>
+            </div>
+          </div>
+          <div class="mt-30 my-checkbox">
+            <p class="display">Checkbox</p>
+            <label class='checkbox-wrapper'>
+              <input type="checkbox">
+              <div class="custom-checkbox">
+                <svg id="Capa_1" enable-background="new 0 0 515.556 515.556" height="512" viewBox="0 0 515.556 515.556"
+                      width="512" xmlns="http://www.w3.org/2000/svg">
+                      <path d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z" />
+                </svg>
+              </div>
+              <span class="label">
+                Text
+              </span>
+            </label>
+          </div>
+          <div class="mt-30 my-radio">
+            <p class="display">Radio</p>
+            <label class='radio-btn-wrapper'>
+              <input type="radio" name='person'>
+              <div class="custom-radio-btn">
+                <svg class="radio-btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0)">
+                    <path
+                          d="M21 22.4516H19.4516V3.48387C19.4516 3.05632 19.105 2.70968 18.6774 2.70968H12.871V0.774194C12.871 0.346645 12.5244 0 12.0968 0H6.72583C6.29828 0 5.95164 0.346645 5.95164 0.774194V2.70968H5.3226C4.89506 2.70968 4.54841 3.05632 4.54841 3.48387V22.4516H3.00002C2.57248 22.4516 2.22583 22.7983 2.22583 23.2258C2.22583 23.6534 2.57248 24 3.00002 24H21C21.4276 24 21.7742 23.6534 21.7742 23.2258C21.7742 22.7983 21.4276 22.4516 21 22.4516ZM7.50002 1.54839H11.3226V2.70968H7.50002V1.54839ZM10.4516 22.4516V19.1613H13.5484V22.4516H10.4516ZM15.0968 22.4516V19.1613H15.4355C15.8631 19.1613 16.2097 18.8146 16.2097 18.3871C16.2097 17.9595 15.8631 17.6129 15.4355 17.6129C12.7426 17.6129 11.0588 17.6129 8.56454 17.6129C8.13699 17.6129 7.79035 17.9595 7.79035 18.3871C7.79035 18.8146 8.13699 19.1613 8.56454 19.1613H8.90325V22.4516H6.0968V4.25806H17.9032V22.4516H15.0968ZM10.8871 6.53226C10.8871 6.95981 10.5405 7.30645 10.1129 7.30645H9.24196C8.81441 7.30645 8.46777 6.95981 8.46777 6.53226C8.46777 6.10471 8.81441 5.75806 9.24196 5.75806H10.1129C10.5405 5.75806 10.8871 6.10471 10.8871 6.53226ZM15.4839 6.53226C15.4839 6.95981 15.1373 7.30645 14.7097 7.30645H13.8387C13.4111 7.30645 13.0645 6.95981 13.0645 6.53226C13.0645 6.10471 13.4111 5.75806 13.8387 5.75806H14.7097C15.1373 5.75806 15.4839 6.10471 15.4839 6.53226ZM10.8871 9.43548C10.8871 9.86303 10.5405 10.2097 10.1129 10.2097H9.24196C8.81441 10.2097 8.46777 9.86303 8.46777 9.43548C8.46777 9.00794 8.81441 8.66129 9.24196 8.66129H10.1129C10.5405 8.66129 10.8871 9.00794 10.8871 9.43548ZM15.4839 9.43548C15.4839 9.86303 15.1373 10.2097 14.7097 10.2097H13.8387C13.4111 10.2097 13.0645 9.86303 13.0645 9.43548C13.0645 9.00794 13.4111 8.66129 13.8387 8.66129H14.7097C15.1373 8.66129 15.4839 9.00794 15.4839 9.43548ZM10.8871 12.3387C10.8871 12.7663 10.5405 13.1129 10.1129 13.1129H9.24196C8.81441 13.1129 8.46777 12.7663 8.46777 12.3387C8.46777 11.9112 8.81441 11.5645 9.24196 11.5645H10.1129C10.5405 11.5645 10.8871 11.9112 10.8871 12.3387ZM15.4839 12.3387C15.4839 12.7663 15.1373 13.1129 14.7097 13.1129H13.8387C13.4111 13.1129 13.0645 12.7663 13.0645 12.3387C13.0645 11.9112 13.4111 11.5645 13.8387 11.5645H14.7097C15.1373 11.5645 15.4839 11.9112 15.4839 12.3387ZM10.8871 15.2419C10.8871 15.6695 10.5405 16.0161 10.1129 16.0161H9.24196C8.81441 16.0161 8.46777 15.6695 8.46777 15.2419C8.46777 14.8144 8.81441 14.4677 9.24196 14.4677H10.1129C10.5405 14.4677 10.8871 14.8144 10.8871 15.2419ZM15.4839 15.2419C15.4839 15.6695 15.1373 16.0161 14.7097 16.0161H13.8387C13.4111 16.0161 13.0645 15.6695 13.0645 15.2419C13.0645 14.8144 13.4111 14.4677 13.8387 14.4677H14.7097C15.1373 14.4677 15.4839 14.8144 15.4839 15.2419Z"
+                          fill="#3A76F0" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                Я юридиское лицо
+              </div>
+            </label>
+
+            <label class='radio-btn-wrapper'>
+              <input type="radio" name='person'>
+              <div class="justify-center custom-radio-btn">
+                Я юридиское лицо
+              </div>
+            </label>
+
+            <label class='radio-wrapper'>
+              <input type="radio" name="radio-id">
+              <div class="custom-radio">
+
+              </div>
+              <span class="label">
+                Text
+              </span>
+            </label>
+            <label class='radio-wrapper'>
+              <input type="radio" name="radio-id">
+              <div class="custom-radio">
+
+              </div>
+              <span class="label">
+                Text
+              </span>
+            </label>
+          </div>
+          <div class="mt-30 my-inputs">
+            <p class="display">Inputs</p>
+            <input type="text">
+            <textarea class='mt-20 d-block' name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <div class="my-popups mt-30">
+            <p class="display">Popups</p>
+            <div id="popup-js" class='popup mfp-hide'>
+              <Popup>
+            </div>
+            <div class='popup' id="popup-test">
+              <h1 class="popup__title">Popup header</h1>
+              <svg class='popup__close popup-close-js' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+                <g>
+                  <g>
+                    <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+                      L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+                      c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+                      l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+                      L284.286,256.002z"/>
+                  </g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+            </div>
+          </div>
+          <div class="mt-30 my-badges">
             <p class="display">Badges</p>
             <div class="p d-flex">
               <div class="badge">1</div>

@@ -1,0 +1,38 @@
+.checkbox-wrapper {
+  display: flex;
+  //Выравниваем текст и checkbox по вертикали
+  align-items: flex-end;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+input[type='checkbox']:checked+.custom-checkbox::before {
+  display: block;
+}
+
+input[type='checkbox']:checked+.custom-checkbox svg {
+  display: block;
+}
+
+.custom-checkbox {
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+
+  //Габаритные размеры
+  width: 25px;
+  height: 25px;
+  background-color: #ddd;
+
+  //Делаем отступ для svg если это нужно
+  // padding: 3px;
+  svg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    fill: orange;
+  }
+}

@@ -76,21 +76,17 @@
     },
     "dependencies": {
         "axios": "^0.21.0",
-        "jq-accordion": "^1.0.3",
         "jquery": "^3.5.1",
         "magnific-popup": "^1.1.0",
         "normalize.css": "^8.0.1",
         "slick-carousel": "^1.8.1",
         "slim-select": "^1.26.0",
         "smart-grid": "^2.1.2",
-        "vue": "^2.6.12"
+        "vue": "^2.6.12",
+        "vuelidate": "^0.7.6"
     },
     "husky": {
-        "hooks": {
-            
-        }
+        "hooks": {}
     },
-    "lint-staged": {
-
-    }
+    "lint-staged": {}
 }
