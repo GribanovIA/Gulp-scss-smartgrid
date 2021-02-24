@@ -1,4 +1,5 @@
 .btn {
+  cursor: pointer;
 
   //Отступы
   padding: 7px;
@@ -10,7 +11,7 @@
 
   //Размеры
   // width: 290px;
-  // min-height: 70px;
+  // height: 70px;
 
   //Border
   border: 0 solid #000;
@@ -31,8 +32,12 @@
   letter-spacing: 0;
   text-align: left;
 
-
-  cursor: pointer;
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: #000;
+      stroke: #000;
+    }
 
   &:hover {}
 }

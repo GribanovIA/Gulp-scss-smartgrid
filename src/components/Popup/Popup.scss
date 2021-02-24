@@ -1,50 +1,30 @@
-.popup {
+.popup-form {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  height: 500px;
+  width: 450px;
+  background-color: rgb(216, 222, 224);
+  text-align: center;
+
+  &__close {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
-.popup-pending {
+.popup-form-pending {
   justify-content: center;
   align-items: center;
 }
-.popup-success {
+.popup-form-success {
   justify-content: center;
   align-items: center;
 }
 .is-invalid {
   border: 2px solid red;
-}
-
-
-/* overlay at start */
-.mfp-fade.mfp-bg {
-  opacity: 0;
-
-  transition: all 0.2s ease-out;
-}
-
-/* overlay animate in */
-.mfp-fade.mfp-bg.mfp-ready {
-  opacity: 0.8;
-}
-
-/* overlay animate out */
-.mfp-fade.mfp-bg.mfp-removing {
-  opacity: 0;
-}
-
-/* content at start */
-.mfp-fade.mfp-wrap .mfp-content {
-  opacity: 0;
-
-  transition: all 0.2s ease-out;
-}
-
-/* content animate it */
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-  opacity: 1;
-}
-
-/* content animate out */
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-  opacity: 0;
 }

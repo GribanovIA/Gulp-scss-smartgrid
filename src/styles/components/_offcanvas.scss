@@ -1,0 +1,33 @@
+.uk-offcanvas {
+  &-overlay {
+    &::before {
+      background: rgba(0, 0, 0, 0.5);
+      transition: opacity 0.15s linear;
+    }
+  }
+
+  &-bar {
+    //padding: 0;
+    width: 460px;
+    background-color: rgb(200, 200, 200);
+
+    &-animation {
+      transition: left 0.2s ease-out;
+    }
+  }
+
+  &-close {
+    cursor: pointer;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 960px) {
+  .uk-offcanvas-bar {
+    //padding: 0;
+    width: 460px;
+  }
+}

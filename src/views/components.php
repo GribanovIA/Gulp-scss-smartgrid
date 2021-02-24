@@ -45,12 +45,12 @@
           <div class="mt-30 my-typography">
             <p class='display'>Typography</p>
             <div class="p">
-              <h1>Пример заголовка h1</h1>
-              <h2>Пример заголовка h2</h2>
-              <h3>Пример заголовка h3</h3>
-              <h4>Пример заголовка h4</h4>
-              <h5>Пример заголовка h5</h5>
-              <h6>Пример заголовка h6</h6>
+              <h1>h1 (32px)</h1>
+              <h2>h2 (24px)</h2>
+              <h3>h3 (19px)</h3>
+              <h4>h4 (16px)</h4>
+              <h5>h5 (13px)</h5>
+              <h6>h6 (11px)</h6>
               <div class="text-small">text-small</div>
               <span class='mark'>mark</span>
             </div>
@@ -60,7 +60,7 @@
                 link-secondary
               </a>
               <a href="#" class='link-secondary d-block'>
-                link-secondary
+                link-secondary arrow-right
                 <svg class='ml-3' width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                    <path d="M1 5C0.447715 5 0 5.44772 0 6C0 6.55228 0.447715 7 1 7V5ZM13 6L13.7071 6.70711C14.0976 6.31658 14.0976 5.68342 13.7071 5.29289L13 6ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893C6.90237 0.683417 6.90237 1.31658 7.29289 1.70711L8.70711 0.292893ZM7.29289 10.2929C6.90237 10.6834 6.90237 11.3166 7.29289 11.7071C7.68342 12.0976 8.31658 12.0976 8.70711 11.7071L7.29289 10.2929ZM1 7H13V5H1V7ZM13.7071 5.29289L8.70711 0.292893L7.29289 1.70711L12.2929 6.70711L13.7071 5.29289ZM12.2929 5.29289L7.29289 10.2929L8.70711 11.7071L13.7071 6.70711L12.2929 5.29289Z" fill="#ffc107"/>
                 </svg>
@@ -128,23 +128,23 @@
                     <rect y="5" width="12" height="2" fill="black"/>
                     <rect x="7" width="12" height="2" transform="rotate(90 7 0)" fill="black"/>
                   </svg>
-                  btn btn-primary
+                  btn btn-primary svg-l
                 </button>
                 <button class="my-components__btn btn btn-secondary">
                   <svg class='mr-7' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect y="5" width="12" height="2" fill="black"/>
                     <rect x="7" width="12" height="2" transform="rotate(90 7 0)" fill="black"/>
                   </svg>
-                  btn btn-secondary
+                  btn btn-secondary svg-l
                 </button>
                 <button class="my-components__btn btn btn-primary">
-                  btn btn-primary
+                  btn btn-primary svg-r
                   <svg class='ml-7' width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 5C0.447715 5 0 5.44772 0 6C0 6.55228 0.447715 7 1 7V5ZM13 6L13.7071 6.70711C14.0976 6.31658 14.0976 5.68342 13.7071 5.29289L13 6ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893C6.90237 0.683417 6.90237 1.31658 7.29289 1.70711L8.70711 0.292893ZM7.29289 10.2929C6.90237 10.6834 6.90237 11.3166 7.29289 11.7071C7.68342 12.0976 8.31658 12.0976 8.70711 11.7071L7.29289 10.2929ZM1 7H13V5H1V7ZM13.7071 5.29289L8.70711 0.292893L7.29289 1.70711L12.2929 6.70711L13.7071 5.29289ZM12.2929 5.29289L7.29289 10.2929L8.70711 11.7071L13.7071 6.70711L12.2929 5.29289Z" fill="black"/>
                   </svg>
                 </button>
                 <button class="my-components__btn btn btn-secondary">
-                  btn btn-secondary
+                  btn btn-secondary svg-r
                   <svg class='ml-7' width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 5C0.447715 5 0 5.44772 0 6C0 6.55228 0.447715 7 1 7V5ZM13 6L13.7071 6.70711C14.0976 6.31658 14.0976 5.68342 13.7071 5.29289L13 6ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893C6.90237 0.683417 6.90237 1.31658 7.29289 1.70711L8.70711 0.292893ZM7.29289 10.2929C6.90237 10.6834 6.90237 11.3166 7.29289 11.7071C7.68342 12.0976 8.31658 12.0976 8.70711 11.7071L7.29289 10.2929ZM1 7H13V5H1V7ZM13.7071 5.29289L8.70711 0.292893L7.29289 1.70711L12.2929 6.70711L13.7071 5.29289ZM12.2929 5.29289L7.29289 10.2929L8.70711 11.7071L13.7071 6.70711L12.2929 5.29289Z" fill="black"/>
                   </svg>
@@ -244,24 +244,17 @@
           </div>
           <div class="mt-30 my-inputs">
             <p class="display">Inputs</p>
-            <input type="text">
-            <textarea class='mt-20 d-block' name="" id="" cols="30" rows="10"></textarea>
-          </div>
-          <div class="my-popups mt-30">
-            <p class="display">Popups</p>
-            <div id="popup-js" class='popup mfp-hide'>
-              <Popup>
-            </div>
-            <div class='popup' id="popup-test">
-              <h1 class="popup__title">Popup header</h1>
-              <svg class='popup__close popup-close-js' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+            <div class="input-icon">
+              <input type="text" placeholder="Svg изображение в input">
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	              viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                 <g>
                   <g>
-                    <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
-                      L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
-                      c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
-                      l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
-                      L284.286,256.002z"/>
+                    <path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148
+                      C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962
+                      c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216
+                      h40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40
+                      c59.551,0,108,48.448,108,108S315.551,256,256,256z"/>
                   </g>
                 </g>
                 <g>
@@ -294,7 +287,18 @@
                 </g>
                 <g>
                 </g>
-                </svg>
+              </svg>
+            </div>
+            <input type="text">
+            <textarea class='mt-20 d-block' name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <div class="my-popups mt-30">
+            <p class="display">Popups</p>
+            <div id="popup-js" class='mfp-hide'>
+              <Popup>
+            </div>
+            <div class='popup' id="popup-test">
+              <Popup>
             </div>
           </div>
           <div class="mt-30 my-badges">

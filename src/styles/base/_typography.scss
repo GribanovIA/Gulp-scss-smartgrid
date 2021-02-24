@@ -1,20 +1,57 @@
-h1, h2, h3, h4, h5 {
+.h1, .h2, .h3, .h4, .h5 {
 
 }
-h1 {
+.h1 {
 
 }
-h2 {
+.h2 {
 
 }
-h3 {
+.h3 {
   
 }
-h4 {
+.h4 {
 
 }
-h5 {
+.h5 {
 
+}
+
+//Жирность шрифта
+.thin {
+  font-weight: 100;
+}
+
+.extra-light {
+  font-weight: 200;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extra-bold {
+  font-weight: 800;
+}
+
+.black {
+  font-weight: 900;
 }
 
 .text-small {
@@ -25,23 +62,53 @@ h5 {
   background-color: #ffe58f;
 }
 
-a.link-primary {
+.link {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {}
+}
+
+.link-primary {
   color: $link-primary;
-  &:hover {
 
+  &:hover {}
+
+  svg {
+    fill: $link-primary;
+    stroke: $link-primary;
+
+    path {
+      fill: $link-primary;
+      stroke: $link-primary;
+    }
   }
 }
 
-a.link-secondary {
+.link-secondary {
   color: $link-secondary;
-  &:hover {
 
+  &:hover {}
+
+  svg {
+    fill: $link-secondary;
+    stroke: $link-secondary;
+
+    path {
+      fill: $link-secondary;
+      stroke: $link-secondary;
+    }
   }
 }
-
 
 .p {
-  padding: 10px 0;
+  
 }
 
 .display {

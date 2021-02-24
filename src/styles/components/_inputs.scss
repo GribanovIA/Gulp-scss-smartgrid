@@ -1,0 +1,36 @@
+input {
+  //Убираем обводку при фокусе
+  &:focus {
+    outline: none;
+    color: inherit;
+  }
+
+  //Стили для placeholder
+  &::placeholder {
+    color: #000;
+  }
+}
+
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  input {
+    padding-left: 25px;
+  }
+
+  svg {
+    position: absolute;
+    left: 5px;
+    width: 16px;
+    height: 16px;
+    fill: red;
+    stroke: red;
+
+    path {
+      fill: red;
+      stroke: red;
+    }
+  }
+}

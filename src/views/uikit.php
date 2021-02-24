@@ -93,7 +93,7 @@
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                   </div>
                 </div>
-                <h2 class="uk-mt-50">Scroll</h2>
+                <h2 class="uk-mt-50">Scroll (обязательно тег ссылка)</h2>
                 <a class="uk-button uk-button-primary d-block" href="#target" uk-scroll>Scroll down</a>
 
                 <h2 class="uk-mt-50">Toggle</h2>

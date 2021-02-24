@@ -5,7 +5,7 @@
 <script>
 export default {
   data: ()=> ({
-    msg: 'Hello from component'
+    msg: 'После создания компонента его необходимо зарегистрировать в vue-instance.js'
   })
 }
 </script>
