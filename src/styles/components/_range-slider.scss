@@ -1,0 +1,54 @@
+$noUi-bg: #f0efef;
+$noUi-bg-between-handle: #5d71dd;
+$noUi-height: 3px;
+$noUi-handle-size: 22px;
+.range-slider {
+  padding-right: 19px;
+  padding-left: 0px;
+  &__controls {
+    display: flex;
+  }
+  &__control {
+    padding: 8px 15px;
+    border: 1px solid #777;
+    border-radius: 3px;
+    display: flex;
+  }
+  &__input {
+    border: none;
+    &::placeholder {
+      color: rgb(126, 126, 126);
+    }
+  }
+}
+.noUi {
+  &-target {
+    background: $noUi-bg;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  &-connect {
+    background: $noUi-bg-between-handle;
+  }
+  &-horizontal {
+    height: $noUi-height;
+    .noUi-handle {
+      cursor: pointer;
+      top: $noUi-height / 2;
+      transform: translateY(-50%);
+      width: $noUi-handle-size;
+      height: $noUi-handle-size;
+      right: -19px;
+      background-color: #fff;
+      border: 3px solid #5d71dd;
+      border-radius: 50%;
+      box-shadow: none;
+
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

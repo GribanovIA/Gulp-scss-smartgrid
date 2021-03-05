@@ -42,6 +42,7 @@
   &:hover {}
 }
 
+//Стили для неактивный кнопок
 button:disabled {
   cursor: default;
   opacity: .65;

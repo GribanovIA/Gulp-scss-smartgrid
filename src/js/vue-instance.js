@@ -8,9 +8,9 @@ Vue.use(Vuelidate);
 let app = new Vue({
   el: '#app',
   components: {
-    //Регистрация компонентов в kebab-notation
-    'Hello': Hello,
-    'Popup': Popup,
+    //Регистрация компонентов в kebab-notation. Все буквы должны быть в нижнем регистре
+    'hello': Hello,
+    'popup': Popup,
   },
   data: {
     msg: 'Hello, this is Vue !!!'

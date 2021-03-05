@@ -22,7 +22,10 @@ gulp.task("styles", () => {
     return gulp.src(paths.styles.src)
         .pipe(gulpif(!production, sourcemaps.init()))
         .pipe(plumber())
-        .pipe(sass())
+        .pipe(sass({
+          //При импорте сначала файлы ищутся в папке node_modules
+          includePaths: ['node_modules']
+        }))
         //Создаем алиас для url пути к картинкам в папке dist/img
         .pipe(replace("@img", "./../img"))
           //Создаем алиас для url пути к svg картинкам в папке dist/img

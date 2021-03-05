@@ -1,7 +1,8 @@
 <template>
   <div>
-    <div v-if="status == 'INITIAL'" class="popup-form popup-form-initial">
-      <h1 class="popup-form__title">Popup header {{message}}</h1>
+    <div class="popup-form popup-form-initial">
+      <popup-status :status="status" />
+      <h1 class="popup-form__title">Popup header</h1>
       <svg class='popup-form__close popup-close-js' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
         <g>
           <g>
@@ -44,48 +45,67 @@
         </g>
       </svg>
       <form @submit.prevent="submit" class="popup-form__form">
-        <input 
+        <!-- <========== 3) Добавить поля инпуты в разметку ==========> -->
+
+
+        <div class="popup-form__input">
+          <input 
                 v-model.trim="name"
                 placeholder="Ваше имя"
                 type="text"
                 class="popup-form__form-input d-block"
                 :class="$v.name.$error ? 'is-invalid': ''"
-        >
-        <p v-if="$v.name.$dirty && !$v.name.required">
-          Данное поле обазательное
-        </p>
-        <input 
+          >
+          <p v-if="$v.name.$dirty && !$v.name.required">
+            Данное поле обазательное
+          </p>
+        </div>
+        <div class="popup-form__input">
+          <input 
+                v-model.trim="email"
+                placeholder="Ваш email"
+                type="text"
+                class="popup-form__form-input d-block"
+                :class="$v.email.$error ? 'is-invalid': ''"
+          >
+          <p v-if="$v.email.$dirty && !$v.email.required">
+            Данное поле обазательное
+          </p>
+        </div>
+        <div class="popup-form__input">
+          <input 
                 v-model.trim="phone"
                 placeholder="Номер телефона"
                 type="text"
                 class="popup-form__form-input d-block"
                 :class="$v.phone.$error ? 'is-invalid': ''"
-        >
-        <p v-if="$v.phone.$dirty && !$v.phone.required">
-          Данное поле обазательное
-        </p>
-        <p v-if="$v.phone.$dirty && !$v.phone.minLength">
-          Данное поле должно содержать больше 8-ми символов
-        </p>
-        <button type="submit" class="popup-form__form-btn btn btn-primary">Оставить заявку</button>
+          >
+          <p v-if="$v.phone.$dirty && !$v.phone.required">
+            Данное поле обазательное
+          </p>
+          <p v-if="$v.phone.$dirty && !$v.phone.minLength">
+            Данное поле должно содержать больше 8-ми символов
+          </p>
+        </div> 
+
+
+        <div v-if="status === 'ERROR'" class='popup-form__server-error'>
+          <p v-for="error in serverErrorMessages" :key='error'>
+            {{error}}
+          </p>
+        </div>
+
+
+        <button :disabled="$v.$dirty && $v.$invalid" type="submit" class="popup-form__form-btn btn btn-primary">Оставить заявку</button>
       </form>
     </div>  
-    <div v-if="status == 'PENDING'" class="popup-form popup-form-pending">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-        <circle cx="50" cy="50" fill="none" stroke="#1d0e0b" stroke-width="4" r="20" stroke-dasharray="94.24777960769379 33.41592653589793">
-        <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="0.9345794392523364s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
-        </circle>
-      </svg>
-    </div>
-    <div v-if="status == 'SUCCESS'" class="popup-form popup-form-success">
-      <h1 class="popup-form-success__message">Ваша заявка успешно отправлена</h1>
-    </div>
   </div>
 </template>
 
 <script>
 import { required, minLength } from 'vuelidate/lib/validators'
-
+import {sendFormData} from '../../js/api/api-methods';
+import PopupStatus from '../PopupStatus/PopupStatus.vue';
 function delay(ms) {
   return new Promise((resolve, reject) => {
     setTimeout(resolve, ms);
@@ -93,14 +113,26 @@ function delay(ms) {
 }
 
 export default {
+  components: {
+    'popup-status': PopupStatus
+  },
   data: ()=> ({
+    //<========== 1) Определить поля формы ==========>
+
     name: '',
+    email: '',
     phone: '',
-    message: 'Привет, Popup!',
-    status: 'INITIAL',
+    formName: 'Сделать рассчет стоимости',
+    serverErrorMessages: '',
+    status: '',
   }),
+    //<========== 2) Что необходимо валидировать ==========>
+
   validations: {
     name: {
+      required
+    },
+    email: {
       required
     },
     phone: {
@@ -110,7 +142,6 @@ export default {
   },
   methods: {
     submit() {
-      console.log('Click submit btn');
       //Метод touch запускает валидацию
       this.$v.$touch()
       if (this.$v.$invalid) {
@@ -118,19 +149,42 @@ export default {
       } else {
         // do your submit logic here
         this.status = 'PENDING'
-        delay(1000)
-        .then(()=>{
-          this.status = 'SUCCESS';
-          console.log('Success');
-          return delay(1500);
+        // <========== 4) Отправляем значение инпутов на сервер ==========>
+        // <========== Далее необходимо смотреть файл mail.php ==========>
+
+        sendFormData({
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
+          formName: this.formName
+        })
+        .then((response)=>{
+          //<=== 11) Проверяем статус ответа от сервера ===>
+          if(response.data.status === "ERROR") {
+            throw {
+              status: response.data.status,
+              messages: response.data.messages
+            }
+          } else if(response.data.status === "SUCCESS") {
+            this.status = 'SUCCESS';
+            //Задержка перед закрытием модального окна
+            return delay(1600);
+          }
         })
         .then(()=>{
-          this.status = 'INITIAL';
+          //<=== 12) Сбрасываем все поля и закрываем модальное окно ===>
+          this.status = '';
           this.name = '';
+          this.email = '';
           this.phone = '';
           this.$v.$reset();
           //Закрываем popup
           $.magnificPopup.close();
+        })
+        .catch((e)=>{
+          this.status = "ERROR"
+          console.log(e);
+          this.serverErrorMessages = e.messages;
         })
       }
     }

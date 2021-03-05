@@ -290,15 +290,45 @@
               </svg>
             </div>
             <input type="text">
+            <input type="tel" class="phone-mask d-block mt-30">
             <textarea class='mt-20 d-block' name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <div class="mt-30 my-select">
+            <p class="display">Select</p>
+            <select name="Пол" class="js-choice">
+              <option value data-choices-placeholder>Введите пол</option>
+              <option value="Мужской">Мужской</option>
+              <option value="Женский">Женский</option>
+            </select>
+          </div>
+          <div class="mt-30 my-range-slider">
+            <p class="display">Range-slider</p>
+            <div class="range-slider-wrap">
+              <div class="range-slider"></div>
+              <div class="range-slider__controls mt-30">
+
+                <label class='range-slider__control input-range'>
+                  <span class='mr-10'>от</span>
+                  <input class='range-slider__input range-slider__start-js' type="number" min="500" max="999999" placeholder="500">
+                  <span class='to'>р</span>
+                </label>
+
+                <label class='range-slider__control input-range' class='ml-30'>
+                  <span class='mr-10'>до</span>
+                  <input class='range-slider__input range-slider__end-js' type="number" min="500" max="999999" placeholder="999999">
+                  <span class='to'>р</span>
+                </label>
+
+              </div>
+            </div>
           </div>
           <div class="my-popups mt-30">
             <p class="display">Popups</p>
             <div id="popup-js" class='mfp-hide'>
-              <Popup>
+              <popup>
             </div>
             <div class='popup' id="popup-test">
-              <Popup>
+              <popup>
             </div>
           </div>
           <div class="mt-30 my-badges">
@@ -314,8 +344,3 @@
       <script src="js/vendor.js"></script>
     </body>
 </html>
-
-
-
-
-

@@ -4,20 +4,22 @@
 @import "import/smart-grid-fluid";
 @import "import/smart-grid";
 
-// https://github.com/vctrfrnndz/jquery-accordion
-@import "import/jquery-accordion";
 
 // https://jonsuh.com/hamburgers/ https://github.com/jonsuh/hamburgers
-@import "import/hamburgers/hamburgers.scss";
+@import "hamburgers/_sass/hamburgers/hamburgers";
 
 // https://dimsemenov.com/plugins/magnific-popup/
-@import "import/magnific-popup/main";
+@import "magnific-popup/src/css/main";
 
 // https://slimselectjs.com/options
 @import "import/slimselect";
 
 // https://lokesh-coder.github.io/pretty-checkbox/
-@import "import/pretty-checkbox/pretty-checkbox.scss";
+@import "pretty-checkbox/src/pretty-checkbox";
 
 //https://getuikit.com/docs/introduction
 @import "import/uikit/uikit";
+
+@import "choices.js/src/styles/choices";
+
+@import "nouislider/distribute/nouislider";

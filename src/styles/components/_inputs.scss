@@ -1,3 +1,27 @@
+//Стили для placeholder inputmask
+input[type="tel"] {
+  &:hover {}
+
+  &::placeholder {
+    //Стили для placeholder маски ввода
+    color: rgb(170, 170, 170);
+  }
+}
+
+//Убираем стандартные стрелки у Input с типом number
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
 input {
   //Убираем обводку при фокусе
   &:focus {
@@ -10,6 +34,7 @@ input {
     color: #000;
   }
 }
+
 
 .input-icon {
   position: relative;
