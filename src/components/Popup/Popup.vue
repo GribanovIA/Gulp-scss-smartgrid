@@ -122,7 +122,7 @@ export default {
     name: '',
     email: '',
     phone: '',
-    formName: 'Сделать рассчет стоимости',
+    formName: 'Сделать расчет стоимости',
     serverErrorMessages: '',
     status: '',
   }),
@@ -166,6 +166,7 @@ export default {
               messages: response.data.messages
             }
           } else if(response.data.status === "SUCCESS") {
+            console.log(response.data);
             this.status = 'SUCCESS';
             //Задержка перед закрытием модального окна
             return delay(1600);
@@ -181,10 +182,20 @@ export default {
           //Закрываем popup
           $.magnificPopup.close();
         })
-        .catch((e)=>{
-          this.status = "ERROR"
-          console.log(e);
-          this.serverErrorMessages = e.messages;
+        .catch((err)=>{
+          if(err.response) {
+            //Сервер ответил с ошибкой 4хх/5хх
+            console.log(err.response);
+          } else if(err.request) {
+            //Запрос сделан, но не получен ответ
+            console.log(err.request);
+          } else {
+            console.log()
+            //Ошибка на уровне программы, проброс исключения throw
+            this.status = "ERROR"
+            this.serverErrorMessages = err.messages;
+          }
+          
         })
       }
     }

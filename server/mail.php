@@ -1,7 +1,7 @@
 <?php
 //Задержка для тестирования спинера
 // sleep(1);
-require('../vendor/autoload.php');
+require('./vendor/autoload.php');
 //Если делаем запрос через axios
 $_POST = json_decode(file_get_contents('php://input'), true);
 
@@ -65,7 +65,7 @@ if(isset($_POST['submit'])){
       $mail->IsHTML(true);
 
       //От кого письмо
-      $mail->setFrom('darcos13@my-blog.space','Грибанов Иван');
+      $mail->setFrom('site@my-blog.space','Сайт');
 
       //Кому отправить
       $mail->addAddress('gribanovivanjob@gmail.com');

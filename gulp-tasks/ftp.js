@@ -9,19 +9,25 @@ let conn = ftp.create({
   parallel: 10,
 });
 
-gulp.task('removeFileFromServer', (cb) => {
-  conn.rmdir(ftpData.dist + '**', function (err) {
+gulp.task('removeFilesFromServer', (cb) => {
+  conn.rmdir(ftpData.dist + '**/*', function (err) {
     if (err) return cb(err);
     cb();
   });
 });
 
-gulp.task('downloadFileToServer', () => {
+gulp.task('downloadFilesToServer', () => {
   return gulp.src(ftpData.src, {
     buffer: false
   })
     .pipe(conn.dest(ftpData.dist));
-
 });
 
-gulp.task('deploy', gulp.series('removeFileFromServer', 'downloadFileToServer'));
+gulp.task('downloadServerFilesToServer', ()=> {
+  return gulp.src(ftpData.srcServerFiles, {
+      buffer: false
+    })
+      .pipe(conn.dest(ftpData.distServerFiles));
+});
+
+gulp.task('deploy', gulp.series('removeFilesFromServer', 'downloadFilesToServer','downloadServerFilesToServer'));
