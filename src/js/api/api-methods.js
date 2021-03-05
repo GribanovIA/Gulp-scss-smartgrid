@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-const BASEURL = 'http://my-blog.space' //Адрес хостинга
+const BASEURL = 'http://dev.my-blog.space/' //Адрес хостинга
 
 const instance = Axios.create({
   baseURL: process.env.NODE_ENV === "production" ? BASEURL : ''
